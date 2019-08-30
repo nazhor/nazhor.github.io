@@ -1,0 +1,329 @@
+:root {
+    --main-bg-color-b: #0C0C0C;
+    --main-bg-color-w: #ffffff;
+    --main-bg-color-sel: #ff0000;
+    --main-txt-color: #ffffff;
+    --borders-width: 1px;
+    --borders-radius: 0.2rem;
+}
+
+html {
+    height: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0px;
+    height: 100%;
+    background-image: url("/images/tile.png");
+    background-repeat: repeat;
+    color: var(--main-txt-color);
+}
+
+footer {
+    color: var(--main-txt-color);
+    font-size: 0.85rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#header-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    background: var(--main-bg-color-b);
+}
+
+#about-button,
+#projects-button,
+#lang-button {
+    background: var(--main-bg-color-b);
+    color: var(--main-txt-color);
+    margin: 0.3rem;
+    border-style: solid;
+    border-width: var(--borders-width);
+    border-radius: var(--borders-radius);
+    border-color: var(--main-bg-color-w);
+}
+
+#about-button,
+#projects-button {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#about-button {
+    display : none;
+}
+
+#lang-button {
+    float: right;
+    font-size: 0.8rem;
+}
+
+#about-button:hover,
+#projects-button:hover,
+#lang-button:hover {
+    background: var(--main-bg-color-sel);
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.vertical-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fotoyo {
+    margin: 0.75rem auto;
+    border-style: solid;
+    border-width: var(--borders-width);
+    border-radius: 50%;
+    border-color: var(--main-bg-color-w);
+}
+
+.page-container {
+    position: relative;
+}
+
+#about,
+#projects {
+    margin-top: 3.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: calc(95vh - 1.5rem);
+}
+
+#projects {
+    display: none;
+}
+
+#description {
+    text-align: justify;
+    margin: 0;
+    padding: 0.75rem;
+    border-style: solid;
+    border-width: var(--borders-width);
+    border-radius: var(--borders-radius);
+    border-color: var(--main-bg-color-w);
+}
+
+#social {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.spaaace {
+    height: 3rem;
+}
+
+.fab,
+.fas,
+.far {
+    color: var(--main-txt-color);
+    padding: 0.25rem 0.15rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.fab:hover,
+.fas:hover,
+.far:hover {
+    color: var(--main-bg-color-sel);
+}
+
+.project-left,
+.project-right {
+    margin: auto 1.5rem;
+}
+
+.project-right {
+    position: relative;
+}
+
+.project-left p {
+    text-align: justify;
+}
+
+.project-slides {
+    margin-bottom: 1rem;
+}
+
+.project-img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.nav-left,
+.nav-right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0.25rem;
+    margin-top: -1rem;
+    font-size: 1.25rem;
+    color: var(--main-bg-color-b);
+    background-color: var(--main-bg-color-w);
+    border-radius: 0 var(--borders-radius) var(--borders-radius) 0;
+}
+
+.nav-right {
+    right: 0;
+    border-radius: var(--borders-radius) 0 0 var(--borders-radius);
+ }
+
+.nav-left:hover,
+.nav-right:hover {
+    color: var(--main-txt-color);
+    background-color: var(--main-bg-color-sel);
+}
+
+.p-white,
+.p-black,
+.filter {
+    margin-left: 0.5rem;
+}
+
+.p-white {
+    background: var(--main-bg-color-w);
+    color: #000000 !important;
+}
+
+.p-black {
+    background: var(--main-bg-color-b);
+    color: #ffffff !important;
+    border-style: solid;
+    border-color: var(--main-bg-color-w);
+    border-width: 0 0 var(--borders-width) var(--borders-width);
+}
+
+.filter p {
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.all {
+    display: inline-flex;
+}
+
+.links-container {
+    background-image: url("/images/tile.png");
+    background-repeat: repeat;
+    width: max-content;
+    margin: 1.25rem;
+    margin-left: -1px;
+    border-style: solid;
+    border-color: var(--main-bg-color-w) var(--main-bg-color-w) var(--main-bg-color-w) var(--main-bg-color-b);
+    border-width: var(--borders-width);
+    border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.filter-button {
+    border-style: solid;
+    border-color: var(--main-bg-color-w);
+    border-width: var(--borders-width);
+}
+
+.filter-button:hover {
+    background-color: var(--main-bg-color-sel);
+    cursor: pointer;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+#close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--main-bg-color-w);
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#close-modal:hover {
+    color: var(--main-bg-color-sel);
+}
+
+.modal-img {
+    display: block;
+    margin: auto;
+    max-width: 75%;
+}
+
+@media screen and (min-width: 64em) {
+    #about-button,
+    #projects-button,
+    #lang-button {
+        margin: 0.5rem;
+    }
+
+    #about-button,
+    #projects-button {
+        font-size: 1.4rem;
+        margin-left: 1.5rem;
+    }
+
+    #lang-button {
+        font-size: 1rem;
+        margin-right: 1.5rem;
+    }
+
+    #about,
+    #projects {
+        margin-top: 4.5rem;
+    }
+
+    .fotoyo {
+        margin: 0.75rem auto;
+    }
+
+    #description {
+        margin: auto 2rem;
+    }
+
+    .project-left {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 3rem;
+        margin-right: 1.5rem;
+    }
+
+    .project-right {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 1.5rem;
+        margin-right: 3rem;
+    }
+}
